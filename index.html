@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let firstInput = parseInt(prompt("Entrez une première valeur"));
+      let operatorInput = prompt("Entrez un opérateur");
+      let secondInput = parseInt(prompt("Entrez une seconde valeur"));
+
+      function calculate(firstValue, secondValue, operator) {
+        let result;
+        switch (operator) {
+          case "+":
+            result = firstValue + secondValue;
+            break;
+          case "-":
+            result = firstValue - secondValue;
+            break;
+          case "*":
+            result = firstValue * secondValue;
+            break;
+          case "/":
+            result = firstValue / secondValue;
+            break;
+          default:
+            result = NaN;
+        }
+        return result;
+      }
+
+      console.log(
+        "Le résultat du calcul : ",
+        calculate(firstInput, operatorInput, secondInput)
+      );
+    </script>
+  </body>
+</html>
